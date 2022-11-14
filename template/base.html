@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+  <title>Home Page</title>
+  <link rel='stylesheet' type="text/css" href="{% static 'style2.css' %}">
+</head>
+<body>
+<div class="header">
+    <h1>Welcome to green estate</h1>
+    <h4>Signed in as {{ request.user.email }}</h4>
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Logout</button>
+    </form>
+</div>
+
+<div class="container">
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert">{{message}}</div>
+        {% endfor %}
+    {% endif %}
+</div>
+
+
+<div class="homepage">
+    <h3>Generate visit code</h3>
+    <form action="" method="POST">
+        {% csrf_token %}
+    <p>Visitor Name</p>
+    <input type="text" name="name" placeholder="Name">
+    <p>Period of Visit</p>
+    <input type="datetime-local" name="from" required>
+    <input type="datetime-local" name="to" required>
+    <button type="submit">Generate Code</button>
+   </form>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel='stylesheet' type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+<div class="login-form">
+  <h1>Green Estate </h1>
+  <ul>
+    {% for message in messages %}
+      <li>{{message}}</li>
+    {% endfor %}
+  </ul>
+
+  <form action="" method="POST">
+        {% csrf_token %}
+    <p>EMAIL</p>
+    <input type="text" name="email" placeholder="Email">
+    <p>Password</p>
+    <input type="password" name="password" placeholder="Password">
+    <button type="submit">Login</button>
+    <div class="small">
+      <small class="text-muted ml-3" >Don't have an account yet? <a href="register/">Sign up now</a></small>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>

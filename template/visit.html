@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Visit</title>
+  <link rel='stylesheet' type="text/css" href="{% static 'stylit.css' %}">
+</head>
+<body>
+<div class="top">
+    <h4>Signed in as {{ request.user.email }}</h4>
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Logout</button>
+    </form>
+</div>
+<div class="header">
+    <h1>Visitor Information</h1>
+    <form action="" method="GET">
+        <input type="text" name="code" placeholder="Code">
+        <button type="submit">Verify</button>
+    </form>
+
+    {% if visit %}
+
+    <p> The visitor's name is {{ visit.name }} and the code is valid from {{ visit.valid_from }} to {{ visit.valid_to }} and was created by {{ visit.creator }} </p>
+
+    {% else %}
+
+    <p> Wrong code </p>
+
+    {% endif %}
+</div>
+
+
+</body>
+</html>
