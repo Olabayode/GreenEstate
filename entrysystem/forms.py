@@ -6,9 +6,7 @@ from random import randint
 
 class UserRegisterForm(UserCreationForm):
     email = forms.EmailField()
-    usertype = forms.CharField(
-        max_length=20
-    )
+    usertype = forms.ChoiceField(choices=NewUser.user_type)
 
     class Meta:
         model = NewUser
