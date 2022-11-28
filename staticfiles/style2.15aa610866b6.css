@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+background: url("./blackground.b7f19d3c473a.jpg") no-repeat;
+background-size: cover;
+}
+
+
+.homepage {
+width: 350px;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+position: absolute;
+color: #fff;
+}
+
+
+.header h1 {
+font-size: 40px;
+text-align: center;
+text-transform: uppercase;
+color: green;
+}
+
+.header h4 {
+    text-align: center;
+    color: gold;
+}
+
+.header form {
+    display: flex;
+    justify-content: center;
+}
+
+.header form button {
+    appearance: none;
+    text-align: center;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: gold;
+}
+
+.container  {
+text-align: center;
+color: gold;
+font-weight: 700;
+font-size: 30px;
+font-family: sans-serif;
+}
+
+.homepage h3 {
+font-size: 30px;
+text-align: centre;
+text-transform: uppercase;
+margin: 30px 0;
+color: green;
+}
+
+.homepage p {
+font-size: 20px;
+margin: 15px 0;
+text-transform: uppercase;
+color: #f3ec0e;
+}
+
+.homepage input {
+font-size: 16px;
+width: 100%;
+padding: 15px 10px;
+border: 0;
+outline: none;
+border-radius: 5px;
+}
+
+.homepage button {
+font-size: 18px;
+font-weight: bold;
+margin: 20px 0;
+padding: 10px 15px;
+width: 50%;
+border-radius: 5px;
+border: 0;
+color: green;
+}
