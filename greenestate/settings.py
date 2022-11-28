@@ -81,10 +81,11 @@ WSGI_APPLICATION = "greenestate.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "greenestate",
-        "USER": "postgres",
-        "PASSWORD": "Emmypee9",
-        "HOST": "localhost",
+        "NAME": os.getenv("DB_NAME", "greenestate"),
+        "USER": os.getenv("DB_USER", "postgres"),
+        "PASSWORD": os.getenv("DB_PASSWORD", "Emmypee9"),
+        "HOST": os.getenv("DB_HOST", "localhost"),
+        "PORT": os.getenv("DB_PORT", 5432)
     }
 }
 
