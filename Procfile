@@ -1,1 +1,1 @@
-web: gunicorn greenestate.wsgi
+web: gunicorn greenestate.wsgi:application --log-file -
