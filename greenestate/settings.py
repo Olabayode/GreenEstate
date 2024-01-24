@@ -29,7 +29,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['web-production-d4be.up.railway.app', '127.0.0.1']
+ALLOWED_HOSTS = ['web-production-d4be.up.railway.app', '127.0.0.1', '.vercel.app']
 
 
 # Application definition
